@@ -6,8 +6,8 @@
     <title>Services | Meta Green Solutions</title>
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
-    <link href="/styles.css" rel="stylesheet" type="text/css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet" type="text/css"/>
     <script>
         tailwind.config = {
             theme: {
@@ -15,96 +15,244 @@
                     colors: {
                         'primary': '#059669',
                         'secondary': '#10b981',
-                        'dark-bg': '#1f2937',
+                        'dark-bg': '#0f172a',
                     },
                     fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
                     },
                 }
             }
         }
     </script>
 </head>
-<body class="bg-gray-50 font-sans">
-    <header class="fixed top-0 left-0 right-0 bg-white shadow-lg z-10">
+<body class="bg-slate-50 font-sans antialiased">
+
+    <!-- Header -->
+    <header id="site-header" class="site-header fixed top-0 left-0 right-0 z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-20">
-            <a href="home.html" class="text-2xl font-extrabold text-primary tracking-tight">
-                <img src="images/metagreen-logo.svg" alt="Meta Green Solutions" class="h-16"/>
+            <a href="home.html" class="flex-shrink-0">
+                <img src="images/metagreen-logo.svg" alt="Meta Green Solutions" class="h-14 sm:h-16"/>
             </a>
-            <nav class="hidden md:flex space-x-8">
-                <a href="home.html" class="text-gray-600 hover:text-primary transition duration-300 font-medium">Home</a>
-                <a href="services.html" class="text-primary font-medium">Services</a>
-                <a href="portfolio.html" class="text-gray-600 hover:text-primary transition duration-300 font-medium">Portfolio</a>
-                <a href="about.html" class="text-gray-600 hover:text-primary transition duration-300 font-medium">About Us</a>
-                <a href="contact.html" class="text-white bg-primary hover:bg-secondary px-4 py-2 rounded-lg transition duration-300">Contact</a>
+            <nav class="hidden md:flex items-center space-x-8">
+                <a href="home.html" class="nav-link text-slate-600 hover:text-primary transition duration-300 font-medium">Home</a>
+                <a href="services.html" class="nav-link active text-primary font-semibold">Services</a>
+                <a href="portfolio.html" class="nav-link text-slate-600 hover:text-primary transition duration-300 font-medium">Portfolio</a>
+                <a href="about.html" class="nav-link text-slate-600 hover:text-primary transition duration-300 font-medium">About Us</a>
+                <a href="contact.html" class="btn-primary !py-2.5 !px-5 !text-sm">Contact Us</a>
             </nav>
-            <button id="mobile-menu-button" class="md:hidden text-gray-600 hover:text-primary p-2 focus:outline-none rounded-md">
+            <button id="mobile-menu-button" class="md:hidden text-slate-600 hover:text-primary p-2 focus:outline-none rounded-lg" aria-label="Toggle menu">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
             </button>
         </div>
-        <div id="mobile-menu" class="hidden md:hidden absolute w-full bg-white shadow-xl py-2 border-t border-gray-200">
-            <a href="home.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Home</a>
-            <a href="services.html" class="block px-4 py-2 text-primary font-medium">Services</a>
-            <a href="portfolio.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Portfolio</a>
-            <a href="about.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">About Us</a>
-            <a href="contact.html" class="block px-4 py-2 text-white bg-primary hover:bg-secondary m-2 rounded-lg text-center">Contact</a>
+        <div id="mobile-menu" class="hidden md:hidden absolute w-full bg-white/95 backdrop-blur-lg shadow-xl py-3 border-t border-emerald-100">
+            <a href="home.html" class="block px-6 py-2.5 text-slate-700 hover:bg-emerald-50">Home</a>
+            <a href="services.html" class="block px-6 py-2.5 text-primary font-semibold">Services</a>
+            <a href="portfolio.html" class="block px-6 py-2.5 text-slate-700 hover:bg-emerald-50">Portfolio</a>
+            <a href="about.html" class="block px-6 py-2.5 text-slate-700 hover:bg-emerald-50">About Us</a>
+            <a href="contact.html" class="block mx-4 mt-2 py-2.5 text-center text-white bg-primary hover:bg-secondary rounded-lg font-medium">Contact Us</a>
         </div>
     </header>
 
     <main>
-        <section class="pt-20">
-            <img src="images/services-hero-banner.jpeg" alt="Services Hero Banner" class="w-full h-[700px] object-cover"/>
+        <!-- Page Hero -->
+        <section class="page-hero" aria-label="Services banner">
+            <img src="images/services-hero-banner.jpeg" alt="Professional landscaping services"/>
+            <div class="page-hero-content">
+                <div class="max-w-7xl mx-auto w-full">
+                    <span class="inline-block px-3 py-1 mb-4 text-xs font-bold tracking-widest uppercase text-emerald-300 bg-white/10 backdrop-blur-sm rounded-full border border-white/20">Our Services</span>
+                    <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white leading-tight mb-4 max-w-2xl">Integrated Grounds & Labor Solutions</h1>
+                    <p class="text-base sm:text-lg text-white/80 max-w-xl leading-relaxed">Expert horticultural design and reliable workforce staffing — one partner for every phase of your project.</p>
+                </div>
+            </div>
         </section>
-        
-        <section class="bg-white pt-16 pb-20">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center mb-12">
-                    <span class="text-primary text-sm font-semibold uppercase tracking-wider">What We Offer</span>
-                    <h2 class="mt-2 text-3xl font-extrabold text-gray-900 sm:text-4xl">
-                        Integrated Grounds & Labor Solutions
-                    </h2>
+
+        <!-- Services -->
+        <section class="offer-section py-20 lg:py-28">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="text-center mb-14">
+                    <span class="section-badge">What We Offer</span>
+                    <h2 class="mt-4 text-3xl sm:text-4xl font-extrabold text-slate-900">Complete Landscaping & Staffing Services</h2>
+                    <p class="mt-4 text-lg text-slate-500 max-w-2xl mx-auto">From 3D design concepts to on-site crew deployment — we handle design, installation, maintenance, and labor under one roof.</p>
                 </div>
 
-                <div class="grid md:grid-cols-2 gap-10">
-                    <div class="bg-gray-50 p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300">
-                        <h3 class="text-2xl font-bold text-primary mb-3 flex items-center">
-                            <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
-                            Design & Horticulture
-                        </h3>
-                        <ul class="list-disc pl-5 text-gray-600 space-y-2">
-                            <li>**3D Landscape Design:** Conceptual modeling and visual planning.</li>
-                            <li>**Installation:** Full-service planting, hardscaping, and irrigation systems.</li>
-                            <li>**Seasonal Maintenance:** Scheduled trimming, fertilization, and restoration.</li>
-                            <li>**Water Management:** Smart irrigation setup and drought-tolerant planting.</li>
-                        </ul>
+                <div class="grid lg:grid-cols-2 gap-8">
+                    <!-- Design & Horticulture -->
+                    <div class="service-card">
+                        <div class="service-card-image">
+                            <img src="images/Home-Hero2.jpg" alt="Landscape design and horticulture"/>
+                        </div>
+                        <div class="service-card-body">
+                            <div class="service-card-header">
+                                <div class="service-card-icon">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+                                </div>
+                                <h3 class="text-xl font-bold text-slate-900">Design & Horticulture</h3>
+                            </div>
+                            <ul class="service-list">
+                                <li>
+                                    <span class="service-list-check"><svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg></span>
+                                    <span><strong>3D Landscape Design</strong> — Conceptual modeling and visual planning.</span>
+                                </li>
+                                <li>
+                                    <span class="service-list-check"><svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg></span>
+                                    <span><strong>Installation</strong> — Full-service planting, hardscaping, and irrigation systems.</span>
+                                </li>
+                                <li>
+                                    <span class="service-list-check"><svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg></span>
+                                    <span><strong>Seasonal Maintenance</strong> — Scheduled trimming, fertilization, and restoration.</span>
+                                </li>
+                                <li>
+                                    <span class="service-list-check"><svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg></span>
+                                    <span><strong>Water Management</strong> — Smart irrigation setup and drought-tolerant planting.</span>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
 
-                    <div class="bg-gray-50 p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300">
-                        <h3 class="text-2xl font-bold text-primary mb-3 flex items-center">
-                            <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-3m-1.5-11L14 3m-2 3V4m-2 2H8m-6 6h16M7 16V8h10v8H7z"></path></svg>
-                            Managed Workforce
-                        </h3>
-                        <ul class="list-disc pl-5 text-gray-600 space-y-2">
-                            <li>**Skilled Labor:** Certified crew for planting, mulching, and site prep.</li>
-                            <li>**Project Staffing:** Temporary or long-term team deployment for large projects.</li>
-                            <li>**Site Management:** On-site foremen to ensure efficiency and quality control.</li>
-                            <li>**Safety Compliance:** All personnel are trained and compliant with site safety standards.</li>
-                        </ul>
+                    <!-- Managed Workforce -->
+                    <div class="service-card">
+                        <div class="service-card-image">
+                            <img src="images/Home-Hero1.jpg" alt="Managed landscaping workforce"/>
+                        </div>
+                        <div class="service-card-body">
+                            <div class="service-card-header">
+                                <div class="service-card-icon">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                                </div>
+                                <h3 class="text-xl font-bold text-slate-900">Managed Workforce</h3>
+                            </div>
+                            <ul class="service-list">
+                                <li>
+                                    <span class="service-list-check"><svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg></span>
+                                    <span><strong>Skilled Labor</strong> — Certified crew for planting, mulching, and site prep.</span>
+                                </li>
+                                <li>
+                                    <span class="service-list-check"><svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg></span>
+                                    <span><strong>Project Staffing</strong> — Temporary or long-term team deployment for large projects.</span>
+                                </li>
+                                <li>
+                                    <span class="service-list-check"><svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg></span>
+                                    <span><strong>Site Management</strong> — On-site foremen to ensure efficiency and quality control.</span>
+                                </li>
+                                <li>
+                                    <span class="service-list-check"><svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg></span>
+                                    <span><strong>Safety Compliance</strong> — All personnel trained and compliant with site safety standards.</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Accountability banner -->
+                <div class="offer-banner relative z-10">
+                    <div class="flex items-start gap-4 relative z-10">
+                        <div class="hidden sm:flex w-12 h-12 rounded-xl bg-emerald-500/20 items-center justify-center flex-shrink-0">
+                            <svg class="w-6 h-6 text-emerald-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-white mb-2">Single-Source Accountability</h3>
+                            <p class="text-emerald-100/80 text-sm sm:text-base max-w-xl leading-relaxed">One point of contact for design, materials, and labor — ensuring quality control from initial sketch to final planting.</p>
+                        </div>
+                    </div>
+                    <a href="contact.html" class="relative z-10 inline-flex items-center gap-2 px-6 py-3 bg-white text-primary font-semibold rounded-xl hover:bg-emerald-50 transition-colors flex-shrink-0 self-start md:self-center">
+                        Request a Quote
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- How We Work -->
+        <section class="who-section py-20 lg:py-24">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="text-center mb-14">
+                    <span class="section-badge">Our Process</span>
+                    <h2 class="mt-4 text-3xl sm:text-4xl font-extrabold text-slate-900">How We Deliver Results</h2>
+                    <p class="mt-4 text-lg text-slate-500 max-w-2xl mx-auto">A streamlined approach that keeps your project on time, on budget, and on vision.</p>
+                </div>
+                <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="stat-card process-step">
+                        <div class="process-step-num">01</div>
+                        <h3 class="font-bold text-slate-900 mb-2">Consultation</h3>
+                        <p class="text-slate-500 text-sm leading-relaxed">We assess your site, understand your goals, and outline a tailored plan.</p>
+                    </div>
+                    <div class="stat-card process-step">
+                        <div class="process-step-num">02</div>
+                        <h3 class="font-bold text-slate-900 mb-2">Design & Planning</h3>
+                        <p class="text-slate-500 text-sm leading-relaxed">3D modeling, material selection, and crew scheduling before work begins.</p>
+                    </div>
+                    <div class="stat-card process-step">
+                        <div class="process-step-num">03</div>
+                        <h3 class="font-bold text-slate-900 mb-2">Execution</h3>
+                        <p class="text-slate-500 text-sm leading-relaxed">Our skilled teams install, plant, and build with on-site quality oversight.</p>
+                    </div>
+                    <div class="stat-card process-step">
+                        <div class="process-step-num">04</div>
+                        <h3 class="font-bold text-slate-900 mb-2">Ongoing Care</h3>
+                        <p class="text-slate-500 text-sm leading-relaxed">Seasonal maintenance and staffing support to keep your grounds thriving.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="cta-section py-20 lg:py-28">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="lg:grid lg:grid-cols-12 lg:gap-10 items-stretch">
+                    <div class="lg:col-span-7 cta-panel flex flex-col justify-center mb-8 lg:mb-0">
+                        <span class="inline-block w-fit px-3 py-1 mb-5 text-xs font-bold tracking-widest uppercase text-emerald-200 bg-white/10 backdrop-blur-sm rounded-full border border-white/20 relative z-10">Get Started</span>
+                        <h2 class="text-3xl sm:text-4xl font-extrabold text-white mb-4 relative z-10 leading-tight">Need a Custom Solution?</h2>
+                        <p class="text-lg text-white/80 mb-8 max-w-lg relative z-10 leading-relaxed">Whether you need a full landscape redesign or a dedicated crew for your next project, we're ready to help.</p>
+                        <div class="flex flex-wrap gap-4 relative z-10">
+                            <a href="contact.html" class="cta-btn-white">Schedule Consultation</a>
+                            <a href="portfolio.html" class="btn-outline">View Our Work</a>
+                        </div>
+                    </div>
+                    <div class="lg:col-span-5 flex flex-col gap-5 justify-center">
+                        <div class="cta-info-card">
+                            <div class="cta-info-icon">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+                            </div>
+                            <h3 class="font-bold text-slate-900 mb-1">Call Us Today</h3>
+                            <p class="text-slate-500 text-sm mb-2">Speak directly with our project team.</p>
+                            <div class="space-y-1">
+                                <a href="tel:+918867944245" class="block text-primary font-semibold text-sm hover:underline">+91-8867944245</a>
+                                <a href="tel:+918088593322" class="block text-primary font-semibold text-sm hover:underline">+91-8088593322</a>
+                            </div>
+                        </div>
+                        <div class="cta-info-card">
+                            <div class="cta-info-icon">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                            </div>
+                            <h3 class="font-bold text-slate-900 mb-1">Email Us</h3>
+                            <p class="text-slate-500 text-sm mb-2">We'll respond within 24 hours.</p>
+                            <a href="mailto:sales.greenvalleysolutions@gmail.com" class="text-primary font-semibold text-sm hover:underline break-all">sales.greenvalleysolutions@gmail.com</a>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer class="bg-gray-800 text-white py-10">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <img src="images/metagreen-logo.svg" alt="Meta Green Solutions" class="h-16 mx-auto mb-3"/>
-            <div class="flex justify-center space-x-4 mb-4 text-sm">
-                <a href="home.html" class="hover:text-primary transition duration-300">Home</a>
-                <a href="services.html" class="hover:text-primary transition duration-300">Services</a>
-                <a href="contact.html" class="hover:text-primary transition duration-300">Contact</a>
+    <!-- Footer -->
+    <footer class="site-footer text-white py-14">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-8">
+                <div class="text-center md:text-left">
+                    <img src="images/metagreen-logo.svg" alt="Meta Green Solutions" class="h-14 mx-auto md:mx-0 mb-4 brightness-0 invert opacity-90"/>
+                    <p class="text-slate-400 text-sm max-w-xs">Integrated landscaping and workforce solutions for commercial and residential projects.</p>
+                </div>
+                <div class="flex flex-wrap justify-center gap-6 text-sm font-medium">
+                    <a href="home.html" class="text-emerald-400 hover:text-white transition">Home</a>
+                    <a href="services.html" class="text-slate-400 hover:text-white transition">Services</a>
+                    <a href="portfolio.html" class="text-slate-400 hover:text-white transition">Portfolio</a>
+                    <a href="about.html" class="text-slate-400 hover:text-white transition">About</a>
+                    <a href="contact.html" class="text-slate-400 hover:text-white transition">Contact</a>
+                </div>
             </div>
-            <p class="text-gray-500 text-sm">&copy; 2025 Meta Green Solutions. All rights reserved.</p>
+            <div class="mt-10 pt-8 border-t border-slate-700/50 text-center">
+                <p class="text-slate-500 text-sm">&copy; 2025 Meta Green Solutions. All rights reserved.</p>
+            </div>
         </div>
     </footer>
 
@@ -114,6 +262,11 @@
             const mobileMenu = document.getElementById('mobile-menu');
             mobileMenuButton.addEventListener('click', () => {
                 mobileMenu.classList.toggle('hidden');
+            });
+
+            const header = document.getElementById('site-header');
+            window.addEventListener('scroll', () => {
+                header.classList.toggle('scrolled', window.scrollY > 20);
             });
         });
     </script>
